@@ -1,0 +1,56 @@
+header{
+  background-color: #669966;
+  height: 20px;
+  text-align: center;
+}
+ul#geci{
+  height: 220px;
+  margin-left:-30px;
+
+}
+p{
+  margin-left: 30px;
+}
+li.ci{
+  width: 174px;
+  height: 34px;
+  border:solid 3px;
+  background-color: #669966;
+  margin:15px;
+  list-style: none;
+  transition: all 0.3s;
+
+}
+li.ci:hover{
+  background-color: green;
+}
+ul>li.ci:nth-child(n+5){
+  margin-left:220px;
+   
+
+}
+ul>li.ci:nth-child(n+9){
+  margin-left:420px;
+  
+}
+ul>li.ci:nth-child(4n+5){
+  
+  margin-top: -220px; 
+}
+
+li.dfp{
+  border-bottom: dotted 1px;
+  margin-bottom: -2px;
+}
+
+ul#DFP{
+  overflow: hidden;
+}
+div{
+  margin:auto;
+  width:600px;
+}
+footer{
+  background-color: #669966;
+  text-align: center;
+}
