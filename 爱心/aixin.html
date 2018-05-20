@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>爱心</title>
+    <style>
+
+
+      
+     input{
+          display:none;
+    }
+
+      p {
+          margin-left:600px;       
+          margin-top:300px;
+          width:130px;
+          height:300px;
+          background-image: url(11.png);
+          background-repeat: no-repeat;
+         
+}
+
+
+      input:checked + label>p {
+          background-position: right;
+          transition-duration: 0.7s;
+          transition-timing-function: steps(28);
+}
+    </style>
+</head>
+
+<body>
+ <div>
+    <input type="checkbox" id="point">
+    <label for="point"><p></p></label>
+</div>
+  
+</body>
+
+</html>
