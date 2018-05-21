@@ -4,12 +4,55 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>爱心</title>
+    <title>点我</title>
     <style>
 
-
-      
+    /*按钮*/
      input{
+      display:none;
+}
+     label#a{
+     
+      display:inline-block;
+      width:120px;
+      height:60px;
+      border-radius:999px;
+      background-color: #eee;
+      vertical-align: top;
+      padding:4px;
+      transition:background-color 2s,box-shadow 2s;
+      cursor:pointer;
+      margin-left: 100px;
+      margin-top: 100px;
+      
+}
+    label#a::before{
+      content:"";
+      display:inline-block;
+      box-sizing:border-box;
+      width:60px;
+      height:60px;
+      border-radius:999px;
+      background-color:#fff;
+      transition:1s cubic-bezier(.2,-0.65,.76,1.58);
+      box-shadow:inset -2px -2px 5px 1px #aaa  ;
+  
+  
+  
+}
+   input#button:checked + label::before{
+     margin-left: 60px;
+    
+     
+}
+  input#button:checked + label#a{
+    background-color: #99DD00;
+    box-shadow:0 0 8px 18px #99DD00 inset
+}
+
+
+    /*爱心*/ 
+     input#point{
           display:none;
     }
 
@@ -24,7 +67,7 @@
 }
 
 
-      input:checked + label>p {
+      input#point:checked + label>p {
           background-position: right;
           transition-duration: 0.7s;
           transition-timing-function: steps(28);
@@ -33,9 +76,15 @@
 </head>
 
 <body>
+  <div>
+    <!--按钮-->
+    <input type="checkbox" id="button">
+    <label for="button" id="a"></label>
+  </div>
+  <!--爱心-->
  <div>
     <input type="checkbox" id="point">
-    <label for="point"><p></p></label>
+    <label for="point" id="b"><p></p></label>
 </div>
   
 </body>
