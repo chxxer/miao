@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  /*输入框*/
+    div#kuang {
+  display:table;
+  width:100%;
+  border-collapse: collapse;
+  width:100%;
+  
+  
+
+}
+div#kuang span{
+  display:table-cell;
+  border:1px solid;
+  font-size: inherit;
+  background-color: orange;
+  border-right: 0;
+  text-align:center;
+  color:white;
+  
+}
+div#kuang input{
+  display:table-cell;
+  font-size: inherit;
+   width:100%;
+  outline:none;
+  border-style:none;
+  border:1px solid;
+  border-left: 0;
+  cursor:pointer;
+  
+}
+div#kuang span,div#kuang input{
+  margin:0;
+  padding:0;
+}
+div#kuang input:focus{
+  border-color:orange;
+  box-shadow:0 0 5px 3px orange;
+  
+  
+}
+  </style>
+</head>
+<body>
+  <!--输入框-->
+ <div id="kuang">
+   <span>太阳系行星名</span>
+   <input type="text">
+ </div>
+</body>
+</html>

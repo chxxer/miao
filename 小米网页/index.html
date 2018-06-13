@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  
+  html,body,header,main,footer,div,nav,span,ul,li,input{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    min-width: 1226px;
+    xbackground-color: rgba(0,0,0,0.1);
+  }
+  
+    /*页眉*/
+
+    .top {
+       background-image: url(//i1.mifile.cn/a4/cms_15270400062082_IKomG.jpg);
+       height: 120px;
+       background-position:center;
+     } 
+  
+    nav{
+      height: 40px;
+      font-size: 12px;
+      background-color:#333;
+      height: 50px;
+    
+
+     
+    }
+
+
+
+    nav li{
+        float:left;
+        list-style-type:none;
+        margin-left: 15px;
+        color:#b0b0b0; 
+        margin-top: 15px;
+    }
+
+    nav li:hover{
+      color:white;
+    }
+
+    li.liR{
+      float:right;
+    }
+    #ml{
+      margin-left: 100px;
+    }
+    #mr{
+      margin-right: 100px;
+      width: 150px;
+      height: 50px;
+      position: relative;
+    }
+
+    #gwc{
+      display: none;
+      background-color: white ;
+    }
+    #mr:hover>ul{
+      display: inline-block;
+      position: absolute;
+      width: 300px;
+      height: 150px;
+      box-shadow:0 0 5px;
+      top:75%;
+      right:70%;
+      color:black;
+     
+    }
+
+    #gwc li{
+      vertical-align:bottom;
+
+
+    }
+
+
+    /*主体1*/
+  
+  .body1{
+    height: 100px;
+    padding: 25px 0 0 0;
+    margin: 0 auto;
+  }
+
+
+  .miicon{
+    display: inline-block;
+    background-image: url(picture/QQ截图20180530201303.png);
+    background-size: 55px 55px;
+    background-repeat: no-repeat;
+    
+    width: 55px;
+    height: 55px;
+    margin-left: 100px;
+    float: left;
+  }
+
+
+
+
+
+  .body1>ul{
+    float:left;
+    margin-left: 200px;
+
+  }
+
+  .body1 ul>li{
+        position: relative;
+        float:left;
+        list-style-type:none;
+        padding-left: 15px;
+        color:black; 
+        margin-top: 15px;
+        cursor: pointer;
+         
+    }
+
+  .body1 ul>li:hover{
+    color:orange;
+
+  }
+
+
+
+
+  .dorpcut{
+    display: none;
+    position: absolute;
+    top:60px;
+    left: -354px;
+    width: 100vw;
+    height: 200px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
+    margin: 0 auto;
+    padding-left: 200px;
+    
+
+  }
+
+.dorpcut ul{
+  width: 100%;
+  height: 200px;
+  float:left;
+  margin: 0 auto;
+}
+
+.dorpcut ul li{
+  position: relative;
+  float:left;
+}
+
+ .dorpcut img{
+    padding-top: 20px;
+    height: 130px;
+    width: 160px;
+    float:left;
+    border-left: 1px solid #ddd;
+
+ }
+  .dorpcut ul li:first-child img{
+   border-left: 0;
+ }
+
+ .dorpcut ul li::before{
+   
+   content: '新品';
+   position:absolute;
+   top:-14.5px;
+   left:70px;
+   color:orange;
+   padding: 0 15px;
+   border: 1px solid orange;
+ }
+  
+
+
+  .body1 ul>li:hover .dorpcut{
+    display: block;
+    background-color:white;
+
+
+  }
+
+
+
+
+
+
+  .body1 input{
+    float:right;
+    margin-right: 210px;
+    line-height: 50px;
+    width: 250px;
+  }
+
+
+
+/*body2*/
+
+.body2{
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+
+}
+.body2 .body2-bg{
+  background-image: url(picture/xmad_15266344889352_UKcQL.jpg);
+  background-size: 1226px 600px;
+  background-repeat: no-repeat;
+  height: 600px;
+  width:1150px;
+  padding-right: 180px;
+  margin: 0 auto;
+}
+
+.body2-bg ul{
+  list-style-type: none;
+}
+
+.body2-bg ul li{
+  line-height: 60px;
+  width: 220px;
+  box-shadow: 1px 1px 1px 0;
+
+
+
+
+
+  </style>
+</head>
+<body>
+ <header>
+   <a href="https://www.mi.com/a/h/5857.html?client_id=180100041086&masid=17409.0368">
+    <div class="top"></div></a>
+   <nav>
+    <ul>
+      <a href=""><li id="ml">小米商城</li></a>
+      <a href=""><li>MIUI</li></a>
+      <a href=""><li>IoT</li></a>
+      <a href=""><li>云服务</li></a>
+      <a href=""><li>小爱开放平台</li></a>
+      <a href=""><li>金融</li></a>
+      <a href=""><li>有品</li></a>
+      <a href=""><li>政企服务</li></a>
+      <a href=""><li>Select Region</li></a>
+      
+    
+      
+      <a href=""><li class="liR" id="mr">购物车
+     <ul id="gwc">
+        <li>购物车中还没有商品,赶紧选购吧!</li>
+      </ul></li></a>
+      <a href=""><li class="liR">注册</li></a>
+      <a href=""><li class="liR">消息通知</li></a> 
+      <a href=""><li class="liR">登录</li></a>
+   </ul>
+ </nav>
+ </header>   
+     
+  
+     
+     
+  <main>
+    <div class="body1">
+      <span class="miicon"></span>
+      <ul>
+        <li>小米手机
+          <div class="dorpcut">
+          <ul>
+          <li><img src="picture/mix2s320-220white.png" alt=""></li>
+          <li><img src="picture/mix2320-220.png" alt=""></li>
+          <li><img src="picture/note2320x220.png" alt=""></li>
+          <li><img src="picture/5x-2.jpg" alt=""></li>
+          <li><img src="picture/32022012085.jpg" alt=""></li>
+          <li><img src="picture/max2_toubu.png" alt=""></li>
+         </ul>
+         </div>
+        </li>
+        <li>红米</li>
+        <li>电视</li>
+        <li>笔记本</li>
+        <li>盒子</li>
+        <li>新品</li>
+        <li>路由器</li>
+        <li>智能硬件</li>
+        <li>服务</li>
+        <li>社区</li>
+      </ul>
+      <input type="text">
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="body2">
+      <div class="body2-bg">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </main>
+  <footer></footer>
+</body>
+</html>

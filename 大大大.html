@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    html,body{
+  height:100%;
+  margin:0;
+  
+}
+div{
+  box-sizing:border-box;
+  width:100%;
+  height:100%;
+  background-color: tan;
+  position: relative;
+  padding:0;
+  margin:0;
+  border-bottom:5px solid red;
+  
+}
+label p{
+  
+  position: absolute;
+  bottom:0;
+  padding:1000px 300px 0 0;
+  transition:all 2s;
+  }
+    
+   
+input:checked + label p{
+  font-size:8em;
+  color:red;
+  padding:0;
+  </style>
+</head>
+<body>
+ <div><input type="checkbox" id="da"><label for="da"><p>大大大</p></label></div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    /*头部*/
+
+header{
+  position: absolute;
+  left:80px;
+  width: 390px;
+  height: 360px;
+  background-color: rgb(8,188,232);
+  margin: auto;
+  border-radius:196px;
+  border:2px solid;
+  
+}
+.face{
+  position: absolute;
+  bottom:0;
+  left:30px;
+  width: 325px;
+  height: 255px;
+  background-color:white;
+  margin: auto;
+  border-radius:156px 156px 160px 160px/125px 125px 133px 133px ;
+  border:2px solid;
+  
+}
+
+aside{
+  position: absolute;
+  z-index: 1;
+  left:195px;
+  top:183px;
+  height: 112px;
+  border-right: 3px solid;
+}
+.l-eye-w{
+   position: absolute;
+   left:103px;
+   top:50px;
+   width: 90px;
+   height: 102px;
+   border:2px solid;
+   border-radius:46px/47px;
+   background-color:white;
+}
+.r-eye-w{
+   position: absolute;
+   left:196px;
+   top:50px;
+   width: 90px;
+   height: 102px;
+   border:2px solid;
+   border-radius:46px/47px;
+   background-color:white;
+}
+.r-eye{
+   position: absolute;
+   left:205px;
+   top:110px;
+   width: 15px;
+   height: 15px;
+   border:2px solid;
+   border-radius:46px/47px;
+   background-color:black;
+}
+
+.l-eye{
+   position: absolute;
+   left:168px;
+   top:110px;
+   width: 15px;
+   height: 15px;
+   border:2px solid;
+   border-radius:46px/47px;
+   background-color:black;
+}
+.nouse{
+   position: absolute;
+   left:174px;
+   top:138px;
+   width: 41px;
+   height: 41px;
+   border:2px solid;
+   border-radius:46px/47px;
+   background-color:red;
+  
+}
+
+.mous1{
+   position: absolute;
+   left:77px;
+   top:170px;
+   border-bottom: 3px solid black;
+   width: 74px;
+   transform:rotateZ(23deg);
+  
+  
+}
+.mous2{
+   position: absolute;
+   left:78px;
+   top:201px;
+   border-bottom: 3px solid black;
+   width: 74px;
+   
+  
+  
+}
+.mous3{
+   position: absolute;
+   left:77px;
+   top:230px;
+   border-bottom: 3px solid black;
+   width: 74px;
+   transform:rotateZ(-23deg);
+  
+  
+}
+.mous4{
+   position: absolute;
+   left:234px;
+   top:170px;
+   border-bottom: 3px solid black;
+   width: 74px;
+   transform:rotateZ(157deg);
+  
+  
+}
+.mous5{
+   position: absolute;
+   left:233px;
+   top:201px;
+   border-bottom: 3px solid black;
+   width: 74px;
+  
+  
+  
+}
+.mous6{
+   position: absolute;
+   left:234px;
+   top:230px;
+   border-bottom: 3px solid black;
+   width: 74px;
+   transform:rotateZ(203deg);
+  
+  
+}
+.mouse{
+   position: absolute;
+   top:-160px;
+   left:-26px;
+   border-bottom: 3px solid;
+   border-bottom-left-radius:112px;
+   border-bottom-right-radius:112px;
+   width: 224px;
+   height: 224px;
+  
+}
+.box-mouse{
+  position: relative;
+  left:110px;
+  top:230px;
+  width: 170px;
+  height: 100px;
+  xborder:1px solid;
+  overflow: hidden;
+
+  
+}
+
+
+
+
+
+/*项圈*/
+.necklet{
+  position: absolute;
+  top:339px;
+  left:138px;
+  width: 273px;
+  height: 30px;
+  background-color: rgb(214,32,0);
+  border:2px solid;
+  border-radius:16px;
+}
+
+.bell{
+  position: absolute;
+  top:351px;
+  left:251px;
+  width: 52px;
+  height: 52px;
+  background-color:rgb(240,236,36);
+  border:2px solid;
+  border-radius:50px;
+  overflow: hidden;
+}
+
+.bell::before{
+  content:"";
+  position: absolute;
+  top:13px;
+  left:.2px;
+  width: 48px;
+  height: 3px;
+  border:2px solid;
+  xbackground-color: orange;
+}
+
+.bell::after{
+  content:"";
+  position: absolute;
+  top:26px;
+  left:19px;
+  width: 10px;
+  height: 9px;
+  border:2px solid;
+  background-color: black;
+  border-radius:50px;
+}
+.bell-bar{
+  position: absolute;
+  top:35px;
+  left:24px;
+  height:15px;
+  border:2px solid;
+}
+
+.abdomen{
+  position: absolute;
+  z-index: -1;
+  top:312px;
+  left:170px;
+  width: 212px;
+  height: 212px;
+  background-color:white;
+  border:2px solid;
+  border-radius:999px;
+}
+
+.pok{
+  position: absolute;
+  xz-index: -1;
+  top:422px;
+  left:194px;
+  width: 165px;
+  height: 86px;
+  background-color:white;
+  border:2px solid;
+  border-bottom-left-radius:999px;
+  border-bottom-right-radius:999px;
+  
+  
+}
+
+
+
+/*手脚*/
+
+.l-h{
+   position: absolute;
+   z-index:-2 ;
+   left:98px;
+   top:387px;
+   border: 2px solid black;
+   width: 74px;
+   height: 56px;
+   transform:rotateZ(146deg);
+   background-color: rgb(8,188,232) ;
+  
+}
+
+  .r-h{
+   position: absolute;
+   z-index:-2 ;
+   left:380px;
+   top:387px;
+   border: 2px solid black;
+   width: 74px;
+   height: 56px;
+   transform:rotateZ(34deg);
+   background-color: rgb(8,188,232) ;
+  
+}
+
+
+.h-l{
+   position: absolute;
+   left:50px;
+   top:410px;
+   border: 2px solid black;
+   border-radius:36px;
+   width: 76px;
+   height: 76px;
+   background-color:white;
+   
+}
+.h-r{
+   position: absolute;
+   left:426px;
+   top:410px;
+   border: 2px solid black;
+   border-radius:36px;
+   width: 76px;
+   height: 76px;
+   background-color:white;
+   
+}
+
+.body1{
+   position: absolute;
+   z-index: -2;
+   left:150px;
+   top:373px;
+   width: 254px;
+   height: 64px;
+  background-color: rgb(8,188,232) ;
+}
+
+.body2{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   position: absolute;
+   z-index: -2;
+   left:150px;
+   top:433px;
+   width: 254px;
+   height: 125px;
+   background-color: rgb(8,188,232) ;
+   border:2px solid;
+   border-top:0;
+}
+
+.JJ{
+   position: absolute;
+   left:268px;
+   top:544px;
+   border: 2px solid black;
+   border-bottom:0;
+   border-top-left-radius:36px;
+   border-top-right-radius:36px;
+   width: 22px;
+   height: 12px;
+   background-color:white;
+}
+
+.f-l{
+   position: absolute;
+   left:127px;
+   top:555px;
+   border: 2px solid black;
+   border-radius:80px 36px 36px 30px/36px 36px 36px 36px;
+   width: 148px;
+   height: 36px;
+   background-color:white;
+}
+
+.f-r{
+   position: absolute;
+   left:282px;
+   top:555px;
+   border: 2px solid black;
+   border-radius:36px 80px 30px 36px/36px 36px 36px 36px;
+   width: 148px;
+   height: 36px;
+   background-color:white;
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <aside></aside>
+  <div class="face"></div>
+  <div class="l-eye-w"></div>
+  <div class="r-eye-w"></div>
+  <div class="r-eye"></div>
+  <div class="l-eye"></div>
+  <div class="nouse"></div>
+  <div class="mous1"></div>
+  <div class="mous2"></div>
+  <div class="mous3"></div>
+  <div class="mous4"></div>
+  <div class="mous5"></div>
+  <div class="mous6"></div>
+  <div class="box-mouse"><div class="mouse"></div></div>
+</header>
+<main>
+  <div class="necklet"></div>
+  <div class="bell"><div class="bell-bar"></div></div>
+  <div class="abdomen"></div>
+  <div class="pok"></div>
+</main>
+<footer>
+  <div class="l-h"></div>
+  <div class="r-h"></div>
+  <div class="h-r"></div>
+  <div class="h-l"></div>
+  <div class="body1"></div>
+  <div class="body2"></div>
+  <div class="JJ"></div>
+  <div class="f-l"></div>
+  <div class="f-r"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</footer>
+</body>
+</html>
