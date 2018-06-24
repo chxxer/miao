@@ -19,14 +19,26 @@
   var N =Number(prompt('输入一个整数:'))
   -10000 <= N <= 10000
   if (N >= 0) {
-    console.log('N')
+    console.log(N)
   } else if (N < 0) {
-    console.log('-N')
+    console.log(-N)
   }
 
+</script>
 
 
-
+<script id="ch0104/03">
+  debugger
+  var N =Number(prompt('输入一个整数:'))
+  var reslut
+  for (var i = 0; i < N/2; i++) {
+    reslut = N/2 - i
+  } 
+  if (reslut === 0.5) {
+  console.log('odd') 
+  } else {
+  console.log('even')   
+  }
 
 
 </script>
