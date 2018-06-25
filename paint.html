@@ -15,6 +15,7 @@
   <canvas width="400" height="300"></canvas>
 </body>
 <script>
+  debugger
   var cvs = document.querySelector('canvas')
   var ctx = cvs.getContext('2d')
 
@@ -22,8 +23,69 @@
     ctx.fillStyle = color
     ctx.fillRect(x, y, 1, 1)
   }
+  
+ 
+
+
 </script>
 <script>
-  // YOUR CODE GOES HERE
+ for (var x = 0; x < 400; x++) {
+   dot(x,20)
+ }
+ for (var x = 0; x < 400; x+=2) {
+   dot(x,40)
+ } 
+ for (var x = 0; x < 400; x++) {
+   reslut = x % 4
+   if (reslut < 2) {
+     dot(x,60)
+   }
+  }
+ for (var x = 0; x < 400; x++) {
+   reslut = x % 5
+   if (reslut < 4) {
+     dot(x,80)
+   }
+ for (var x = 0; x < 400; x++) {
+   dot(x,x)
+ }
+ for (var x = 0; x < 400; x++) {
+   var y = 0.75 * x
+   dot(x,y)
+ }
+ }
+
+ for (var y = 100; y < 150; y++) {
+   for (var x = 50; x < 100; x++) {
+   dot(x,y)
+ }
+}
+ 
+  for (var y = 200; y < 300; y++) {
+   for (var x = 200; x < 300; x++) {
+    dot(x,y,'rgb(255,'+ (y-200)/100*255 +','+ (x-200)/100*255) +')'
+ }
+}
+  
+
+
+  var cx = 200
+  var cy = 200
+  var r = 50
+//   for (var y = 0; y < 300; y++) {
+//     for (var x = 0; x < 400; x++) {
+//       var distance = (x - cx)**2 + (y - cy)**2
+//       if (distance === r * r) {
+//         dot(x, y - 100,'black')
+//    }
+   
+//  }
+// }
+ for (var theta = 0; theta < 6.28; theta+=0.01) {
+     var x = r * Math.sin(theta) + 200
+     var y = r * Math.cos(theta) + 150
+     dot(x, y)
+   }  
+
 </script>
 </html>
