@@ -1,4 +1,4 @@
-var chxxxer= {
+var chxxer= {
   filter:function(array ,test){
   var result = []
   for (var i = 0; i < array.length; i++) {
@@ -69,18 +69,48 @@ var chxxxer= {
  flatten:function(ary){
   return [].concat(...ary)
 },
-  
+
+
+
+after:function(n, func){
+  var c = 0
+  return function(...args){
+    c++
+    if (c >= n) {
+      return func(...args)
+    }
+  }
+},
+
+ary:function(func, n = func.length){
+  return function(...args){
+    return func(...args.slice(0, n))
+  }
+},
+
+
+
+flip: function(func){
+  return function(...args){
+    return func(...args.reverse())
+  }
+},
+
+negate: function(func){
+  return function(...args){
+    return !func(...args)
+  }
+},
+
+
+spread: function(func){
+  return function(ary){
+    return func(...ary)
+  } 
+},
 
 
 }
-
-
-
-
-
-
-
-
 
 
 
