@@ -1,5 +1,5 @@
 var chxxxer= {
-  filter:function filter(array ,test){
+  filter:function(array ,test){
   var result = []
   for (var i = 0; i < array.length; i++) {
     if (test(ary[i],i,ary)) {
@@ -9,7 +9,7 @@ var chxxxer= {
   return result
 }
 
-  map:function map(array ,mapper){
+  map:function(array ,mapper){
   var result = []
   for (var i = 0; i < array.length; i++) {
      result.push(mapper(i,ary[i],ary))
@@ -17,14 +17,14 @@ var chxxxer= {
   return result
 }
 
-  reduce:function reduce(ary, reducer, init){
+  reduce:function(ary, reducer, init){
   for (var i = 0; i < ary.length; i++) {
     init = reducer(init, i, ary[i], ary)
   }
   return init 
 }
 
-  forEach:function forEach(array, iterator){
+  forEach:function(array, iterator){
   for (var i = 0; i < array.length; i++) {
     
     if (iterator(i, ary[i], ary) === false) {
@@ -39,7 +39,7 @@ var chxxxer= {
 
 
 
- sumBy:function sumBy(ary, iteratee){
+ sumBy:function(ary, iteratee){
   var result
   for (var i = 0; i < ary.length; i++) {
     result += iteratee(ary[i])
@@ -50,12 +50,12 @@ var chxxxer= {
 
 
 
- sum:function sum(ary){
+ sum:function(ary){
   return sumBy(ary, identity)
 }
 
 
- maches:function maches(scr){
+ matches:function(scr){
   return function(obj){
     for(var key in scr)
       if (obj[key] !== scr[key]) {
@@ -66,7 +66,7 @@ var chxxxer= {
 }
 
 
- flatten:function flatten(ary){
+ flatten:function(ary){
   return [].concat(...ary)
 }
   
