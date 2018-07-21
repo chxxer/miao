@@ -7,7 +7,7 @@ var chxxxer= {
     }
   }
   return result
-}
+},
 
   map:function(array ,mapper){
   var result = []
@@ -15,14 +15,14 @@ var chxxxer= {
      result.push(mapper(i,ary[i],ary))
   }
   return result
-}
+},
 
   reduce:function(ary, reducer, init){
   for (var i = 0; i < ary.length; i++) {
     init = reducer(init, i, ary[i], ary)
   }
   return init 
-}
+},
 
   forEach:function(array, iterator){
   for (var i = 0; i < array.length; i++) {
@@ -32,7 +32,7 @@ var chxxxer= {
     }
 }
   return  
-}
+},
 
 
 
@@ -46,13 +46,13 @@ var chxxxer= {
   }
   return result
 
-}
+},
 
 
 
  sum:function(ary){
   return sumBy(ary, identity)
-}
+},
 
 
  matches:function(scr){
@@ -63,16 +63,16 @@ var chxxxer= {
       }
   }
   return true
-}
+},
 
 
  flatten:function(ary){
   return [].concat(...ary)
-}
+},
   
 
 
-  }
+}
 
 
 
